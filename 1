@@ -1,0 +1,45 @@
+#include<stdio.h>
+void add(int a,int b);
+void minus(int a, int b);
+void multiply(int a,int b);
+void divide(int a,int b);
+int main(){
+  int a,b;
+  int choice;
+  while(1){
+  printf("MENU\n1. ADDITION\n2. SUBTRACTION\n3. MULTIPLICATION\n4. DIVISION\n5. EXIT\n");
+  printf("Enter your choice: ");
+  scanf("%d",&choice);
+  if (choice == 5) {
+    printf("Exiting the program. Goodbye!\n");
+    break;
+  }
+  printf("Enter two numbers : ");
+  scanf("%d %d",&a,&b);
+  switch(choice){
+    case 1: add(a,b);
+    break;
+    case 2: minus(a,b);
+    break;
+    case 3: multiply(a,b);
+    break;
+    case 4: divide(a,b);
+    break;
+    default:
+    printf("Enter a proper choice\n");
+  }
+  
+}
+}
+void add(int a,int b){
+  printf("Sum of a and b : %d\n",a+b);
+}
+void minus(int a,int b){
+  printf("Difference of a and b : %d\n",a-b);
+}
+void multiply(int a, int b){
+  printf("a x b : %d\n",a*b);
+}
+void divide(int a,int b){
+  printf("a / b : %d\n",a/b);
+}
